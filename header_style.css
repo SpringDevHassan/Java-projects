@@ -1,0 +1,105 @@
+/* button {
+    background-color: gold;
+} */
+
+section p {
+    text-align: center;
+    font-family: Arial;
+
+}
+
+.font {
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.but {
+    background-color: black;
+    color: white;
+    margin-left: 700px;
+}
+
+a div:hover {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: whitesmoke; /* Set background color to whitesmoke */
+    color: #333; /* Darker text color for contrast */
+    padding: 40px 20px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333; /* Darker header color */
+}
+
+.footer-section p, .footer-section a {
+    color: #666; /* Medium gray text color */
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #000; /* Darker color on hover */
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #666;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: #000;
+}
+
+.footer-section .social a {
+    color: #666;
+    margin-right: 15px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.footer-section .social a:hover {
+    color: #000;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc; /* Light gray border to separate sections */
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #666;
+}
+
+
+
+

@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Needs</title>
+    <link rel="icon" href="../Header 1/Img/Daily Needs (2).jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./header_style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0px;
+            /* background-image: url(./IMG/background.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover; */
+            background-color: whitesmoke;
+        }
+
+        header {
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr;
+            font-family: Arial;
+            margin-top: 20px;
+
+
+        }
+
+        /* CSS for search bar */
+        .search-container {
+    display: flex;
+    align-items: center;
+    
+}
+
+.category-dropdown {
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 16px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.search-bar {
+    width: 250px;
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-radius: 0 0 0 0;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-bar:focus {
+    border-color: #007BFF;
+}
+
+.search-btn {
+    padding: 8px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-btn:hover {
+    background-color: #0056b3;
+}
+
+        .title-img {
+            margin-left: 80px;
+            font-weight: bold;
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+
+        #text span {
+            margin-left: 20px;
+            margin-top: 70px;
+        }
+
+        /* #text {
+            margin-left: 100px;
+        } */
+
+        .reg {
+            margin-left: 200px;
+        }
+
+        .img span {
+            width: 2%;
+            height: 6%;
+        }
+
+        .butt {
+            height: 45px;
+            width: 40px;
+        }
+
+        /* button {
+            color: white;
+            border-top-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            height: 38px;
+            width: 120px;
+            font-weight: bold;
+            box-shadow: 5px 5px 5px black;
+
+        } */
+
+        .FreshCart {
+            position: relative;
+            bottom: 10px;
+
+        }
+
+
+        .container {
+            max-width: 700px;
+            width: 100%;
+            background-color: #fff;
+            padding: 25px 30px;
+            border-radius: 5px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .container .title {
+            font-size: 25px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .container .title::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 30px;
+            border-radius: 5px;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+        }
+
+        .content form .user-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px 0 12px 0;
+        }
+
+        form .user-details .input-box {
+            margin-bottom: 15px;
+            width: calc(100% / 2 - 20px);
+        }
+
+        form .input-box span.details {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .user-details .input-box input {
+            height: 45px;
+            width: 100%;
+            outline: none;
+            font-size: 16px;
+            border-radius: 5px;
+            padding-left: 15px;
+            border: 1px solid #ccc;
+            border-bottom-width: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .user-details .input-box input:focus,
+        .user-details .input-box input:valid {
+            border-color: #9b59b6;
+        }
+
+        form .gender-details .gender-title {
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        form .category {
+            display: flex;
+            width: 80%;
+            margin: 14px 0;
+            justify-content: space-between;
+        }
+
+        form .category label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        form .category label .dot {
+            height: 18px;
+            width: 18px;
+            border-radius: 50%;
+            margin-right: 10px;
+            background: #d9d9d9;
+            border: 5px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        #dot-1:checked~.category label .one,
+        #dot-2:checked~.category label .two,
+        #dot-3:checked~.category label .three {
+            background: #9b59b6;
+            border-color: #d9d9d9;
+        }
+
+        form input[type="radio"] {
+            display: none;
+        }
+
+        form .button {
+            height: 45px;
+            margin: 35px 0
+        }
+
+        form .button input {
+            height: 100%;
+            width: 100%;
+            border-radius: 5px;
+            border: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+        }
+
+        form .button input:hover {
+            /* transform: scale(0.99); */
+            background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+        }
+
+        @media(max-width: 584px) {
+            .container {
+                max-width: 100%;
+            }
+
+            form .user-details .input-box {
+                margin-bottom: 15px;
+                width: 100%;
+            }
+
+            form .category {
+                width: 100%;
+            }
+
+            .content form .user-details {
+                max-height: 300px;
+                overflow-y: scroll;
+            }
+
+            .user-details::-webkit-scrollbar {
+                width: 5px;
+            }
+        }
+
+        @media(max-width: 459px) {
+            .container .content .category {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <div class="title-img">
+            <span class="img">
+                <img src="./IMG/cartt.png" alt=" " width="50px" ; height="40px" ; style="border: color(aqua);">
+            </span>
+            <span class="FreshCart">Daily Needs</span>
+
+
+        </div>
+        
+        <nav>
+            <div class="search-container">
+                <select class="category-dropdown" style="margin-right: 50px;">
+                    <option value="all">All Categories</option>
+                    <option value="skin-care">Skin Care</option>
+                    <option value="groceries">Groceries</option>
+                    <option value="health-care">Health Care</option>
+                    <option value="mens-clothes">Men's Clothes</option>
+                    <option value="womens-clothes">Women's Clothes</option>
+                    <option value="kids-clothes">Kid's Clothes</option>
+                </select>
+                <input type="text" placeholder="Search..." class="search-bar">
+                <button type="submit" class="search-btn">Search</button>
+            </div>
+        </nav>
+        
+        
+
+        <div class="reg">
+            <span class="butt">
+
+                <button style="background-color: #0aad0a;  color: white; border-top-left-radius: 8px; border-bottom-right-radius: 8px; height: 38px; width: 120px; font-weight: bold; box-shadow: 5px 5px 5px black;"  data-bs-toggle="modal" data-bs-target="#loginModal"> Login</button> 
+            </span>
+
+            <span>
+                <button style="background-color: #0aad0a; white; border-top-left-radius: 8px; border-bottom-right-radius: 8px; height: 38px; width: 120px; font-weight: bold; box-shadow: 5px 5px 5px black;" data-bs-toggle="modal" data-bs-target="#exampleModal"> Sign
+                    up</button>
+            </span>
+        </div>
+
+    </header>
+
+    <!-- modal form -->
+
+    <!-- Modal for Login Button-->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Login Form</h5>
+                <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="title">Login</div>
+                    <div class="content">
+                        <form action="#">
+                            <div class="user-details">
+                                <div class="input-box">
+                                    <span class="details">Username</span>
+                                    <input type="text" placeholder="Enter your username" required>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details">Password</span>
+                                    <input type="password" placeholder="Enter your password" required>
+                                </div>
+                            </div>
+                            <div class="button">
+                                <input type="submit" value="Login">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <!-- Modal for sign up button-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Registration Form</h5>
+                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                </div>
+                <div class="modal-body">
+
+                    <div class="container">
+                        <div class="title">Registration</div>
+                        <div class="content">
+                            <form action="#">
+                                <div class="user-details">
+                                    <div class="input-box">
+                                        <span class="details">Full Name</span>
+                                        <input type="text" placeholder="Enter your name" required>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details">Username</span>
+                                        <input type="text" placeholder="Enter your username" required>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details">Email</span>
+                                        <input type="text" placeholder="Enter your email" required>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details">Phone Number</span>
+                                        <input type="text" placeholder="Enter your number" required>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details">Password</span>
+                                        <input type="text" placeholder="Enter your password" required>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details">Confirm Password</span>
+                                        <input type="text" placeholder="Confirm your password" required>
+                                    </div>
+                                </div>
+                                <div class="gender-details">
+                                    <input type="radio" name="gender" id="dot-1">
+                                    <input type="radio" name="gender" id="dot-2">
+                                    <input type="radio" name="gender" id="dot-3">
+                                    <span class="gender-title">Gender</span>
+                                    <div class="category">
+                                        <label for="dot-1">
+                                            <span class="dot one"></span>
+                                            <span class="gender">Male</span>
+                                        </label>
+                                        <label for="dot-2">
+                                            <span class="dot two"></span>
+                                            <span class="gender">Female</span>
+                                        </label>
+                                        <label for="dot-3">
+                                            <span class="dot three"></span>
+                                            <span class="gender">Prefer not to say</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="button">
+                                    <input type="submit" value="Register">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section>
+        <p class="font">Daily Needs is a E-Commerce Shopping Platform </p>
+        <p style="color: grey; font-size: 20px; ">
+            Here you can find relatable and daily needs product <br> At Resonable Prices with desired quality of
+            products
+        </p>
+
+        <a href="../Header 2/Demo.html"><button class="but"   style=" border-top-left-radius: 8px; border-bottom-right-radius: 8px; height: 38px; width: 120px; font-weight: bold; box-shadow: 5px 5px 5px black;">View Demos</button> </a>
+
+    </section> <br> <br>
+
+    <div style="display: grid; grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr;">
+        <a href="../Header 1/skincare.html" style="text-decoration: none;">
+            <div style="border-top-left-radius: 8px; border-bottom-right-radius: 8px; height: 38px; width: 120px; font-weight: bold; box-shadow: 5px 5px 5px black; text-align: center; transition: 0.3s;">
+                Skin Care
+            </div>
+        </a>
+        <a href="../Header 1/Groceries.html" style="text-decoration: none;">
+            <div style="border-top-left-radius: 8px; border-bottom-right-radius: 8px; height: 38px; width: 120px; font-weight: bold; box-shadow: 5px 5px 5px greenyellow; text-align: center; transition: 0.3s;">
+                Groceries
+            </div>
+        </a>
+        <a href="../Header 1/HealthCare.html" style="text-decoration: none;">
+            <div style="border-top-left-radius: 8px; border-bottom-right-radius: 8px; height: 38px; width: 120px; font-weight: bold; box-shadow: 5px 5px 5px red; text-align: center; transition: 0.3s;">
+                Health care
+            </div>
+        </a>
+        <a href="../Header 1/MenCloth.html" style="text-decoration: none;">
+            <div style="border-top-left-radius: 8px; border-bottom-right-radius: 8px; height: 38px; width: 120px; font-weight: bold; box-shadow: 5px 5px 5px cyan; text-align: center; transition: 0.3s;">
+                Men's clothes
+            </div>
+        </a>
+        <a href="../Header 1/WomenCloth.html" style="text-decoration: none;">
+            <div style="border-top-left-radius: 8px; border-bottom-right-radius: 8px; height: 38px; width: 160px; font-weight: bold; box-shadow: 5px 5px 5px lightcoral; text-align: center; transition: 0.3s;">
+                Women's Clothes
+            </div>
+        </a>
+        <a href="../Header 1/KidsCloth.html" style="text-decoration: none;">
+            <div style="border-top-left-radius: 8px; border-bottom-right-radius: 8px; height: 38px; width: 120px; font-weight: bold; box-shadow: 5px 5px 5px lightskyblue; text-align: center; transition: 0.3s;">
+                Kid's Clothes
+            </div>
+        </a>
+    </div> <br>
+
+    <!-- Crousel -->
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./card/shop.jpeg" class="d-block w-100" alt="..." style="height: 500px; width: 500px;">
+          </div>
+          <div class="carousel-item">
+            <img src="./card/sale.jpg" class="d-block w-100" alt="..." style="height: 500px; width: 500px;">
+          </div>
+          <div class="carousel-item">
+            <img src="./card/online.jpg" class="d-block w-100" alt="..." style="height: 500px; width: 500px;">
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+
+      <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p>We provide a wide range of products including Skin Care, Groceries, Health Care, and Clothing. Our mission is to offer quality products at affordable prices.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../Header 2/Header2.html">Home</a></li>
+                    <li><a href="../Header 1/About.html">About</a></li>
+                    <li><a href="../Header 2/Demo.html">Products</a></li>
+                    <li><a href="../Header 1/Support.html">Support</a></li>
+                    
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p><i class="fa fa-address-card" aria-hidden="true"></i> Fatehpur, Sabour, Bhagalpur, Bihar(813210), India</p>
+                <p><i class="fa fa-phone" aria-hidden="true"></i>+91 7004349309</p>
+                <p><i class="fa fa-envelope" aria-hidden="true"></i> mh2062931@gmail.com</p>
+            </div>
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <a href="https://www.facebook.com/your-profile-id" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="www.linkedin.com/in/md-hassan-103831291" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/your-profile-id" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Daily Needs. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    
+    
+    
+
+    <!-- bootstrap -->
+
+   
+    <!-- <script>
+    document.getElementById('show-form-btn').addEventListener('click', function() {
+        document.getElementById('registration-form').style.display = 'block';
+        this.style.display = 'none';
+    });
+</script> -->
+
+</body>
+
+</html>
